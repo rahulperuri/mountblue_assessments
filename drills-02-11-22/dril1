@@ -1,0 +1,82 @@
+1. Create the following directory structure.
+
+rahul@rahul-Aspire-A715-75G:~$ mkdir hello
+rahul@rahul-Aspire-A715-75G:~$ cd hello
+rahul@rahul-Aspire-A715-75G:~/hello$ mkdir five one
+rahul@rahul-Aspire-A715-75G:~/hello$ cd five
+rahul@rahul-Aspire-A715-75G:~/hello/five$ mkdir six
+rahul@rahul-Aspire-A715-75G:~/hello/five$ cd six
+rahul@rahul-Aspire-A715-75G:~/hello/five/six$ touch c.txt
+rahul@rahul-Aspire-A715-75G:~/hello/five/six$ mkdir seven
+rahul@rahul-Aspire-A715-75G:~/hello/five/six$ cd seven
+rahul@rahul-Aspire-A715-75G:~/hello/five/six/seven$ touch error.log
+rahul@rahul-Aspire-A715-75G:~/hello/five/six/seven$ cd../../..
+bash: cd../../..: No such file or directory
+rahul@rahul-Aspire-A715-75G:~/hello/five/six/seven$ cd ../../..
+rahul@rahul-Aspire-A715-75G:~/hello$ cd one
+rahul@rahul-Aspire-A715-75G:~/hello/one$ touch a.txt b.txt
+rahul@rahul-Aspire-A715-75G:~/hello/one$ mkdir two
+rahul@rahul-Aspire-A715-75G:~/hello/one$ cd two
+rahul@rahul-Aspire-A715-75G:~/hello/one/two$ touch d.txt
+rahul@rahul-Aspire-A715-75G:~/hello/one/two$ mkdir three
+rahul@rahul-Aspire-A715-75G:~/hello/one/two$ cd three
+rahul@rahul-Aspire-A715-75G:~/hello/one/two/three$ touch e.txt
+rahul@rahul-Aspire-A715-75G:~/hello/one/two/three$ mkdir four
+rahul@rahul-Aspire-A715-75G:~/hello/one/two/three$ cd four
+rahul@rahul-Aspire-A715-75G:~/hello/one/two/three/four$ touch access.log
+
+
+
+
+2. Delete all the files having the .log extension
+
+rahul@rahul-Aspire-A715-75G:~/hello/one/two/three/four$ cd ../../..
+rahul@rahul-Aspire-A715-75G:~/hello/one$ cd ..
+rahul@rahul-Aspire-A715-75G:~/hello$ cd five/six/seven
+rahul@rahul-Aspire-A715-75G:~/hello/five/six/seven$ rm error.log
+rahul@rahul-Aspire-A715-75G:~/hello/five/six/seven$ cd ../../..
+rahul@rahul-Aspire-A715-75G:~/hello$ cd one/two/three/four
+rahul@rahul-Aspire-A715-75G:~/hello/one/two/three/four$ rm access.log
+
+
+
+3. Add the following content to a.txt. (Unix is a family of multitasking, multiuser computer operating systems that derive from the original AT&T Unix, development starting in the 1970s at the Bell Labs research center by Ken Thompson, Dennis Ritchie, and others)
+
+
+rahul@rahul-Aspire-A715-75G:~/hello/one/two/three/four$ cd ../..
+rahul@rahul-Aspire-A715-75G:~/hello/one/two$ cd ..
+rahul@rahul-Aspire-A715-75G:~/hello/one$ cat>>a.txt
+Unix is a family of multitasking, multiuser computer operating systems that derive from the original AT&T Unix, development starting in the 1970s at the Bell Labs research center by Ken Thompson, Dennis Ritchie, and others
+^C
+rahul@rahul-Aspire-A715-75G:~/hello/one$ cat a.txt
+Unix is a family of multitasking, multiuser computer operating systems that derive from the original AT&T Unix, development starting in the 1970s at the Bell Labs research center by Ken Thompson, Dennis Ritchie, and others
+
+
+4.Delete the directory named five
+
+rahul@rahul-Aspire-A715-75G:~/hello/one$ cd ..
+rahul@rahul-Aspire-A715-75G:~/hello$ rm -r five
+
+
+5.Rename the one directory to uno.
+
+rahul@rahul-Aspire-A715-75G:~/hello$ mv one uno
+rahul@rahul-Aspire-A715-75G:~/hello$ ls
+uno
+
+
+6.Move a.txt to the two directory.
+
+rahul@rahul-Aspire-A715-75G:~/hello$ cd one
+bash: cd: one: No such file or directory
+rahul@rahul-Aspire-A715-75G:~/hello$ cd uno
+rahul@rahul-Aspire-A715-75G:~/hello/uno$ mv a.txt two
+rahul@rahul-Aspire-A715-75G:~/hello/uno$ ls
+b.txt  two
+rahul@rahul-Aspire-A715-75G:~/hello/uno$ cd two
+rahul@rahul-Aspire-A715-75G:~/hello/uno/two$ ls
+a.txt  d.txt  three
+
+
+
+
